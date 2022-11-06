@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+* a {
+    text-decoration: none;
+}
+
+* li {
+    list-style: none;
+}
+
+.container {
+    min-height: 120vh;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bg::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(45%);
+    background-image: url("https://i0.wp.com/i.redd.it/abfh0j1t4an51.png?resize=1200%2C800&ssl=1");
+    background-size: cover;
+    background-position: center;
+}
+
+.navBar {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    height: 15vh;
+}
+
+.navBar ul {
+    display: flex;
+    align-items: center;
+}
+
+.navBar ul li {
+    padding: 0 25px;
+}
+
+.navBar ul li a {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    animation: glow 0.11s ease-in-out infinite alternate;
+}
+
+@keyframes glow{
+  100%{
+    text-shadow: 
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px #fff,
+    0 0 80px #fff,
+    0 0 90px #fff,
+    0 0 100px #fff,
+    0 0 150px #fff;
+  }
+
+  0%{
+    text-shadow: 
+    0 0 4px #fff,
+    0 0 10px #fff,
+    0 0 18px #fff,
+    0 0 38px #fff,
+    0 0 73px #fff,
+    0 0 80px #fff,
+    0 0 94px #fff,
+    0 0 140px #fff;
+  }
+}
+
+.navBar .logo a {
+    font-size: 2.3rem;
+    color: #fff;
+}
+
+h1 {
+    font-size: 6em;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 300px;
+}
+
+h1 span {
+    transition: 0.5s;
+}
+
+h1:hover span:nth-child(1) {
+    margin-right: 10px;
+}
+
+h1:hover span:nth-child(1)::after {
+    content: " ";
+}
+
+h1:hover span:nth-child(1) {
+    margin-left: 40px;
+}
+
+h1:hover span {
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff,
+                 0 0 40px #fff,
+                 0 0 80px #fff,
+                 0 0 120px #fff,
+                 0 0 160px #fff;
+}
+
+</style>
+
+</head>
+<body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <div class="container bg">
+
+      <div class="navBar">
+
+        <div class="logo">
+          <a href="#">
+            <i class="fas fa-car"></i>
+          </a>
+        </div>
+
+        <ul>
+            <li> <a href="Home.html">Home</a> </li>
+            <li> <a href="NewCars.html">New Cars</a> </li>
+            <li> <a href="UsedCars.html">Used Cars</a> </li>
+            <li> <a href="News.html">News</a> </li>
+            <li> <a href="FinancialService.html">Financial Service</a> </li>
+            <li> <a href="Financial Calculator.html">Financial Calculator</a> </li>
+            <li> <a href="Login.html">Login</a> </li>
+        </ul>
+
+    </div>
+
+      <h1> <span> Coming </span> <span> Soon </span> </h1>
+    
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+* a {
+    text-decoration: none;
+}
+
+* li {
+    list-style: none;
+}
+
+.container {
+    min-height: 120vh;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bg::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(45%);
+    background-image: url("https://i0.wp.com/i.redd.it/abfh0j1t4an51.png?resize=1200%2C800&ssl=1");
+    background-size: cover;
+    background-position: center;
+}
+
+.navBar {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    height: 15vh;
+}
+
+.navBar ul {
+    display: flex;
+    align-items: center;
+}
+
+.navBar ul li {
+    padding: 0 25px;
+}
+
+.navBar ul li a {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    animation: glow 0.11s ease-in-out infinite alternate;
+}
+
+@keyframes glow{
+  100%{
+    text-shadow: 
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px #fff,
+    0 0 80px #fff,
+    0 0 90px #fff,
+    0 0 100px #fff,
+    0 0 150px #fff;
+  }
+
+  0%{
+    text-shadow: 
+    0 0 4px #fff,
+    0 0 10px #fff,
+    0 0 18px #fff,
+    0 0 38px #fff,
+    0 0 73px #fff,
+    0 0 80px #fff,
+    0 0 94px #fff,
+    0 0 140px #fff;
+  }
+}
+
+.navBar .logo a {
+    font-size: 2.3rem;
+    color: #fff;
+}
+
+.box {
+    position: relative;
+    margin: 0 auto;
+    width: 380px;
+    height: 420px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box::before {
+    content: " ";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,#fff,#fff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.form {
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: #28292d;
+    z-index: 10;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h2 {
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.inputbox {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+
+.inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.inputbox input:valid ~ span , .inputbox input:focus ~ span {
+    color: #fff;
+    transform: translateX(0px) translateY(-34px);
+    font-size: 0.75em;
+}
+
+.inputbox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.inputbox input:valid ~ i , .inputbox input:focus ~ i {
+    height: 44px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.links a:hover , .links a:nth-child(2) {
+    color: #fff;
+}
+
+input[type="submit"] {
+    border: none;
+    outline: none;
+    background: #fff;
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input[type="submit"]:active {
+    opacity: 0.8;
+}
+
+</style>
+
+</head>
+<body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <div class="container bg">
+
+      <div class="navBar">
+
+        <div class="logo">
+          <a href="#">
+            <i class="fas fa-car"></i>
+          </a>
+        </div>
+
+        <ul>
+            <li> <a href="Home.html">Home</a> </li>
+            <li> <a href="NewCars.html">New Cars</a> </li>
+            <li> <a href="UsedCars.html">Used Cars</a> </li>
+            <li> <a href="News.html">News</a> </li>
+            <li> <a href="FinancialService.html">Financial Service</a> </li>
+            <li> <a href="Financial Calculator.html">Financial Calculator</a> </li>
+            <li> <a href="Login.html">Login</a> </li>
+        </ul>
+
+    </div>
+
+
+    <div class="box">
+
+        <div class="form">
+
+             <h2> Sigh in </h2> 
+
+             <div class="inputbox">
+                <input type="text" required="required">
+                <span> Username </span>
+                <i></i>
+             </div>
+
+             <div class="inputbox">
+                <input type="text" required="required">
+                <span> Password </span>
+                <i></i>
+             </div>
+
+             <div class="links">
+                <a href="#"> Forgot Password</a>
+                <a href="#"> Sign Up</a>
+             </div>
+
+             <input type="submit" value="Login">
+
+        </div>
+
+      </div>
+      
+
+</body>
+</html>

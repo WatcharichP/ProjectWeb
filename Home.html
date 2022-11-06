@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+* a {
+    text-decoration: none;
+}
+
+* li {
+    list-style: none;
+}
+
+.container {
+    min-height: 120vh;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bg::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(45%);
+    background-image: url("https://i0.wp.com/i.redd.it/abfh0j1t4an51.png?resize=1200%2C800&ssl=1");
+    background-size: cover;
+    background-position: center;
+}
+
+.navBar {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    height: 15vh;
+}
+
+.navBar ul {
+    display: flex;
+    align-items: center;
+}
+
+.navBar ul li {
+    padding: 0 25px;
+}
+
+.navBar ul li a {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    animation: glow 0.11s ease-in-out infinite alternate;
+}
+
+@keyframes glow{
+  100%{
+    text-shadow: 
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px #fff,
+    0 0 80px #fff,
+    0 0 90px #fff,
+    0 0 100px #fff,
+    0 0 150px #fff;
+  }
+
+  0%{
+    text-shadow: 
+    0 0 4px #fff,
+    0 0 10px #fff,
+    0 0 18px #fff,
+    0 0 38px #fff,
+    0 0 73px #fff,
+    0 0 80px #fff,
+    0 0 94px #fff,
+    0 0 140px #fff;
+  }
+}
+
+.navBar .logo a {
+    font-size: 2.3rem;
+    color: #fff;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+.NewsHeader {
+    color: #fff;
+    padding: 25px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+}
+
+.card h2 {
+    color: #fff;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.card .box1,.box2,.box3,.box4 {
+    width: 90%;
+    height: 220px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.box1 {
+    background-image: url("https://www.headlightmag.com/hlmwp/wp-content/uploads/2021/04/GT-R-NISMO-Special_2.jpg");
+}
+
+.box2 {
+    background-image: url("https://www.car250.com/wp-content/uploads/2021/08/2023-nissan-z-2-1.jpg");
+}
+
+.box3 {
+    background-image: url("https://www.headlightmag.com/hlmwp/wp-content/uploads/2022/08/Porsche-911-GT3-RS_Ext_05.jpg");
+}
+
+.box4 {
+    background-image: url("https://img.icarcdn.com/autospinn/body/000000511181_39729385_214c_4711_a4aa_ce5990fb2cb8.jpg");
+}
+
+.NewsHeader h2 {
+    font-size: 2rem;
+    letter-spacing: 2.8px;
+}
+
+.text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.txt h1 {
+    font-size: 7rem;
+}
+
+.NewsHeader p {
+    opacity: 0.4;
+}
+
+.card div {
+    transition: 0.5s;
+}
+
+.card div:hover {
+    transition: 0.3s;
+    transform: translateY(-10px);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+</style>
+
+</script>
+
+</head>
+<body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <div class="container bg">
+
+      <div class="navBar">
+
+        <div class="logo">
+          <a href="#">
+            <i class="fas fa-car"></i>
+          </a>
+        </div>
+
+        <ul>
+            <li> <a href="Home.html">Home</a> </li>
+            <li> <a href="NewCars.html">New Cars</a> </li>
+            <li> <a href="UsedCars.html">Used Cars</a> </li>
+            <li> <a href="News.html">News</a> </li>
+            <li> <a href="FinancialService.html">Financial Service</a> </li>
+            <li> <a href="Financial Calculator.html">Financial Calculator</a> </li>
+            <li> <a href="Login.html">Login</a> </li>
+        </ul>
+
+    </div>
+
+      
+    <div class="content">
+
+        <div class="NewsHeader" style="width:50%;">
+
+          <div class="tnx">
+            <h2><i class="fas fa-newspaper"></i> Last Update 5/11/2022</h2>
+          </div>
+
+          <div class="txt">
+            <h1>News</h1>
+          </div>
+
+        </div>
+
+        <div class="card" style="width:50%;">
+
+          <a href="https://www.google.com/" target="_blank">
+            <div class="box1">
+              <h2>GT-R R35 รุ่นพิเศษส่งท้าย</h2>
+            </div>
+          </a>
+
+          <a href="https://www.google.com/" target="_blank">
+            <div class="box2">
+              <h2>เปิดตัว Nissan Z400</h2>
+            </div>
+          </a>
+
+          <a href="https://www.google.com/" target="_blank">
+            <div class="box3">
+              <h2>Porsche 911 GT3 RS ใหม่</h2>
+            </div>
+          </a>
+
+          <a href="https://www.google.com/" target="_blank">
+            <div class="box4">
+              <h2>ตารางผ่อน TOYOTA YARIS ATIV</h2>
+            </div>
+
+          </a>
+
+        </div>
+        
+    </div>
+
+</body>
+</html>
